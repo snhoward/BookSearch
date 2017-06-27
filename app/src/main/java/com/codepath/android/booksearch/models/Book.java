@@ -5,9 +5,12 @@ import android.text.TextUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 
+
+@Parcel
 public class Book {
     private String openLibraryId;
     private String author;
@@ -53,7 +56,7 @@ public class Book {
     }
 
     // Return comma separated author list when there is more than one author
-    private static String getAuthor(final JSONObject jsonObject) {
+    public static String getAuthor(final JSONObject jsonObject) {
         try {
             final JSONArray authors = jsonObject.getJSONArray("author_name");
             int numAuthors = authors.length();

@@ -1,15 +1,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.BookDetailActivity">
+    tools:context=".activities.BookDetailActivity"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
 
     <ImageView
         android:id="@+id/ivBookCover"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
         android:layout_marginTop="8dp"
-        android:layout_width="280dp"
-        android:layout_height="280dp" />
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/tvTitle"
